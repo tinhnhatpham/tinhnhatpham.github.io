@@ -1,11 +1,9 @@
-title: Your awesome title
+title: Home
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: Tinh Pham
+  email: phamnhattinh@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Welcome!
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -16,14 +14,14 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: jekyllrb
-    github:  jekyll
+    # twitter: jekyllrb
+    github:  tinhnhatpham
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
     # instagram: jekyll
-    # linkedin: jekyll
+    linkedin: tinhpham1023
     # pinterest: jekyll
     # youtube: jekyll
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
@@ -58,3 +56,11 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+
+collections:
+    projects:
+        output: true
+        collections:
+        permalink: /my_projects/:name
+
+defaults:
