@@ -20,7 +20,10 @@ $$
 $$
 
 $
-E(aX + b) = \sum_{k}(ak + b)P(X=k) \\
+E(aX + b) = \sum_{k}(ak + b)P(X=k)
+$
+
+$
 E(aX + b) = a\sum_{k}kP(X=k) + b\sum_{k}P(X=k) = aE(X) + b
 $
 
