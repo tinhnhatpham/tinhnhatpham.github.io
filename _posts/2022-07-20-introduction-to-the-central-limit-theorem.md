@@ -69,4 +69,19 @@ We write $\bar{X} \approx N(\mu, \frac{\sigma^2}{n}$
 
 The larger the value $n$, the better the approximation. Typical rule of thumb: $n \ge 30$.
 
+**Proposition:** if $X_1$, $X_2$,..., $X_n$ are iid with $X_i \sim N(\mu, \sigma^2)$ then $\bar{X}\sim N(\mu, \sigma^2/n)$.
 
+**Proposition:** if $X_1$, $X_2$,..., $X_n$ are independent with $X_i \sim N(\mu, \sigma^2)$ then $\sum_{i=1}^{n}X_i \sim N(\sum_{i=1}^{n}\mu_i,\sum_{i=1}^{n}\sigma^2_i)$.
+
+$$
+\begin{align}
+    E(\sum_{i=1}^{n}X_i) &= \sum_{i=1}^{n}E(X_i) = \sum_{i=1}^{n}\mu_i \\
+    V(\sum_{i=1}^{n}X_i) &= \sum_{i=1}^{n}V(X_i) = \sum_{i=1}^{n}\sigma^2_i
+\end{align}
+$$
+
+**Extend:**
+
+$$
+    \sum_{i=1}^{n}c_iX_i \sim N(\sum_{i=1}^{n}c_i\mu_i, \sum_{i=1}^{n}c_i^2\sigma_i^2)
+$$
