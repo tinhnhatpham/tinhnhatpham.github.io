@@ -8,7 +8,7 @@ categories: [Probability]
 
 **Important property:**
 * Recall: Two events $A$ and $B$, are independent if $P(A \cap B) = P(A)P(B)$.
-* $X$ and $Y$ are **independent random variables** if $P(X=x, Y=Y) = P(X=x)P(Y=y)$ for all possible values of $x$ and $y$.
+* $X$ and $Y$ are **independent random variables** if $P(X=x, Y=y) = P(X=x)P(Y=y)$ for all possible values of $x$ and $y$.
 
 ### Jointly Continous Distributed Random Variables
 **Definition:** If $X$ and $Y$ are continous random variables, then $f(x,y)$ is the **joint density mass function** for $X$ and $Y$ if:
