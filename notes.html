@@ -1,0 +1,78 @@
+---
+layout: page
+title: Notes
+permalink: /notes/
+---
+<!--
+{% for project in site.projects %}
+  <h2>
+    <a href="{{ project.url }}">
+      {{ project.class }} - {{ project.family }}
+    </a>
+  </h2>
+{% endfor %}
+-->
+
+<!-- create categories array-->
+{% assign categories_array = "" | split:"|" %}
+
+<!--Add each unique 'my_collection' category to the array-->
+{% for post in site.notes %}
+    {% for category in post.categories %}
+        {% assign categories_array = categories_array | push: category | uniq %}
+    {% endfor %}
+{% endfor %}
+
+
+
+
+<!--Output the categories-->
+
+<!--
+{% for category in categories_array reversed %}
+   <h3> {{category}} </h3>
+   {% assign projects_by_cat = site.notes | where: "categories", category %}
+   <ul class="tags-expo-posts">
+   {% for project in projects_by_cat reversed %}
+    <a class="post-link" href="{{ project.url }}">
+        <li>
+            {{ project.title }}
+        </li>
+    </a>
+   {% endfor %}
+   </ul>
+{% endfor %}
+
+-->
+
+
+<div class="tags-expo">
+  <div class="tags-expo-list">
+    {% for tag in categories_array reversed %}
+    <a href="#{{ tag | slugify }}"> <div class="tag">{{ tag }}</div></a>
+    {% endfor %}
+  </div>
+  <hr />
+  <div class="tags-expo-section">
+    {% for tag in categories_array reversed %}
+    <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+    {% assign projects_by_cat = site.notes | where: "categories", tag %}
+    <ul class="tags-expo-posts">
+      {% for post in projects_by_cat reversed %}
+      <a class="post-link" href="{{ post.url }}">
+        <li>
+          {{ post.title }}
+          <!-- Add the below line if you want the date to be displayed -->
+          <!-- <small class="post-date">{{ post.date | date_to_string }}</small> -->
+        </li>
+      </a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+
